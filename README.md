@@ -1,3 +1,3 @@
-# Ezoic-Interview AdminR
+# AdminR
 
 For a breakdown, go to the .pdf.
