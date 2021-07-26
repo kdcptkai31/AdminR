@@ -1,0 +1,80 @@
+/* App Logo */
+#app {
+    text-align: center;
+    color: lightskyblue;
+    font-size: 40px;
+}
+#titleBox {
+
+    color: blue;
+    background-color: lightskyblue;
+    padding: 30px;
+
+}
+
+/* Add Customer Form */
+#addCustomer {
+    text-align: center;
+    border: 1px solid blue;
+    display:inline-block;
+    align-items: center;
+}
+
+/* Task Bar Buttons */
+button.mainButtons {
+
+    display:inline-block;
+    background-color: navy;
+    padding:0.35em 1.2em;
+    border:0.1em solid #FFFFFF;
+    margin:0 0.3em 0.3em 0;
+    border-radius:0.12em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-size: 23px;
+    font-weight:300;
+    color:lightskyblue;
+    text-align:center;
+    transition: all 0.2s;
+
+}
+button.mainButtons:hover {
+    color:#000000;
+    background-color:greenyellow;
+}
+
+/* Search Bar Buttons */
+button.searchButtons {
+
+    display:inline-block;
+    background-color: navy;
+    padding:0.2em 1.2em;
+    border:0.1em solid #FFFFFF;
+    margin:0 0.3em 0.3em 0;
+    border-radius:0.12em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-size: 15px;
+    font-weight:300;
+    color:lightskyblue;
+    text-align:center;
+    transition: all 0.2s;
+
+}
+button.searchButtons:hover {
+    color:#000000;
+    background-color:greenyellow;
+}
+#searchBar {
+    align-self: center;
+}
+
+/* Generated Table Rows */
+tr.resultItem {
+    border: 1px solid black;
+}
+tr:nth-child(even) {background: #CCC}
+tr:nth-child(odd) {background: #FFF}
+

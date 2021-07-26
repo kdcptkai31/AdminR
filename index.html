@@ -1,0 +1,98 @@
+<!-- Represents the View data page -->
+<!DOCTYPE html>
+<html>
+    <head>
+    	<meta charset="utf-8">
+    	<title>AdminR</title>
+        <link rel="stylesheet" href="index.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    </head>
+    <body>
+        <!-- Main Task Bar -->
+        <table>
+            <tr id="taskBar">
+                <td><h1 id='titleBox'>AdminR</h1></td>
+                <td><button class="mainButtons" style="text-decoration: underline;" v-on:click="loadView">View</button></td>
+                <td><button class="mainButtons" v-on:click="loadAddNew">Add New</button></td>
+            </tr>
+        </table>
+        <!-- Search Bar with different search options -->
+        <table>
+            <tr id="searchBar">
+                <td><input id="searchField" type="text" placeholder="find something..."></td>
+                <td><button class="searchButtons" v-on:click="searchCustomers">Customers</button></td>
+                <td><button class="searchButtons" v-on:click="searchProducts">Products</button></td>
+                <td><button class="searchButtons" v-on:click="searchOrders">Orders</button></td>
+            </tr>
+        </table>
+        <!-- Customer Results Table -->
+        <table id="cResultsView">
+            <tr>
+                <th v-for="col in ccolumns">
+                    {{col}}
+                </th>
+            </tr>
+            <tr class="resultItem" v-for="customer in customers" onclick="getTableDetails(event)">
+                <td v-for="col in customer">
+                    {{col}}
+                </td>
+            </tr>
+        </table>
+        <!-- Product Results Table -->
+        <table id="pResultsView">
+            <tr>
+                <th v-for="pcol in pcolumns">
+                    {{pcol}}
+                </th>
+            </tr>
+            <tr class="resultItem" v-for="product in products">
+                <td v-for="pcol in product">
+                    {{pcol}}
+                </td>
+            </tr>
+        </table>
+        <!-- Order Results Table -->
+        <table id="oResultsView">
+            <tr>
+                <th v-for="ocol in ocolumns">
+                    {{ocol}}
+                </th>
+            </tr>
+            <tr class="resultItem" v-for="order in orders">
+                <td v-for="ocol in order">
+                    {{ocol}}
+                </td>
+            </tr>
+        </table>
+        <!-- Customer Details Orders -->
+        <div id="custDetails">
+            <table>
+                <tr>
+                    <th v-for="header in orderHeaders">
+                        {{header}}
+                    </th>
+                </tr>
+                <tr v-for="order in custOrders">
+                    <td v-for="orderPart in order">
+                        {{orderPart}}
+                    </td>
+                </tr>
+            </table>
+            <br><br>
+            <!-- Customer Payment Details -->
+            <table>
+                <tr>
+                    <th v-for="header in paymentHeaders">
+                        {{header}}
+                    </th>
+                </tr>
+                <tr v-for="payment in custPayments">
+                    <td v-for="paymentPart in payment">
+                        {{paymentPart}}
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>

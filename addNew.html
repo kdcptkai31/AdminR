@@ -1,0 +1,63 @@
+<!-- Represents the Add data page -->
+<!DOCTYPE html>
+<html>
+    <head>
+    	<meta charset="utf-8">
+    	<title>AdminR</title>
+        <link rel="stylesheet" href="index.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    </head>
+    <body>
+        <!-- Main Task Bar -->
+        <table>
+            <tr id="taskBar">
+                <td><h1 id='titleBox'>AdminR</h1></td>
+                <td><button class="mainButtons"  v-on:click="loadView">View</button></td>
+                <td><button class="mainButtons" style="text-decoration: underline;" v-on:click="loadAddNew">Add New</button></td>
+            </tr>
+        </table>
+        <!-- Provides the options for which data type to add -->
+        <table>
+            <tr id="addBar">
+                <td>Choose an item type to add a new one =></td>
+                <td><button class="searchButtons" v-on:click="showAddCustomers">Customers</button></td>
+                <td><button class="searchButtons" v-on:click="showAddProducts">Products</button></td>
+                <td><button class="searchButtons" v-on:click="showAddOrders">Orders</button></td>
+            </tr>
+        </table>
+        <!-- Gives the form to add a customer -->
+        <div id="addCustomer" v-if="isClicked">
+
+            <h3>Add New Customer</h3>
+            Name: <input v-model="custName" type="text">
+            <br>
+            Contact First Name: <input v-model="custFName" type="text">
+            <br>
+            Contact Last Name: <input v-model="custLName" type="text">
+            <br>
+            Phone Number: <input v-model="custPNumber" type="text">
+            <br>
+            Address Line 1: <input v-model="custAdd1" type="text">
+            <br>
+            Address Line 2: <input v-model="custAdd2" type="text">
+            <br>
+            City: <input v-model="custCity" type="text">
+            <br>
+            State: <input v-model="custState" type="text">
+            <br>
+            Zip Code: <input v-model="custZip" type="text">
+            <br>
+            Country: <input v-model="custCountry" type="text">
+            <br>
+            Sales Rep Number: <input v-model="custRepNum" type="text">
+            <br>
+            Credit Limit: <input v-model="custCredit" type="text">
+            <br>
+            <button class="searchButtons" v-on:click="checkAndSubmitCustomer">Add Customer</button>
+            <br>
+            <p hidden style="color: red;" id="cErrorMessage">Enter in all needed info and double check your sales rep number</p>
+
+        </div>
+        <script src="addNew.js"></script>
+    </body>
+</html>
