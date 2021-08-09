@@ -1,3 +1,3 @@
 # AdminR
 
-For a breakdown, go to the .pdf.
+Interview project for a Software Engineering position. For a breakdown, go to the .pdf.
